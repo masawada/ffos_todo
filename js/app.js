@@ -36,7 +36,10 @@
         this.todos.push({text: value});
       },
       removeTodo: function (todo) {
-        this.todos.$remove(todo.$data);
+        todo.$el.addEventListener('animationend', function () {
+          this.todos.$remove(todo.$data);
+        }.bind(this), false);
+        todo.$el.classList.add('todo-remove');
       }
     }
   });
