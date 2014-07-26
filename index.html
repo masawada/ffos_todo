@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <title>ToDo</title>
   <link rel="stylesheet" href="/css/util.css">
   <link rel="stylesheet" href="/style/headers.css">
+  <link rel="stylesheet" href="/style/lists.css">
+  <link rel="stylesheet" href="/style/switches.css">
 </head>
 <body>
 <section role="region">
@@ -14,6 +16,19 @@
     </menu>
     <h1>ToDo</h1>
   </header>
+  <section data-type="list">
+    <ul data-type="edit">
+      <li>
+        <label class="pack-checkbox danger">
+          <input type="checkbox">
+          <span></span>
+        </label>
+        <a href="#">
+          <p>お買い物</p>
+        </a>
+      </li>
+    </ul>
+  </section>
 </section>
 </body>
 </html>
