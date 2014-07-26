@@ -2,11 +2,11 @@
 
   'use strict';
 
-  // 定数の初期化
+  // init consts
   var VERSION = 1.0;
   var STORAGE_NAME = 'fxos_todo';
 
-  // localStorageのラッパー
+  // localStorage wrapper
   var storage = {
     fetch: function () {
       return JSON.parse(localStorage.getItem(STORAGE_NAME) || '[]');
@@ -16,7 +16,7 @@
     }
   };
 
-  // 本体
+  // main
   var app = new Vue({
     el: '#app',
     data: {
@@ -29,7 +29,7 @@
     },
     methods: {
       addTodo: function () {
-        var value = window.prompt('ToDoを入力してください');
+        var value = window.prompt('Add a ToDo');
         if (!value) {
           return;
         }

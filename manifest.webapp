@@ -1,4 +1,13 @@
 {
   "name": "ToDo",
-  "launch_path": "/index.html"
+  "description": "Simple ToDo Application",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/icon/icon-128.png"
+  },
+  "developer": {
+    "name": "Masayoshi Wada",
+    "url": "http://masawada.me"
+  },
+  "default_locale": "en"
 }
