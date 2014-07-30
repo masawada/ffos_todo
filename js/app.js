@@ -36,6 +36,11 @@
         this.todos.push({text: value});
       },
       removeTodo: function (todo) {
+        if (!window.confirm('Are you sure to check?')) {
+          todo.$el.querySelector('input').checked = false;
+          return;
+        }
+
         todo.$el.addEventListener('animationend', function () {
           this.todos.$remove(todo.$data);
         }.bind(this), false);
@@ -43,5 +48,4 @@
       }
     }
   });
-
 })();
