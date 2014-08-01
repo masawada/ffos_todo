@@ -9,5 +9,6 @@
     "name": "Masayoshi Wada",
     "url": "http://masawada.me"
   },
+  "orientation": ["portrait-primary"],
   "default_locale": "en"
 }
