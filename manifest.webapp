@@ -10,5 +10,10 @@
     "url": "http://masawada.me"
   },
   "orientation": ["portrait-primary"],
-  "default_locale": "en"
+  "default_locale": "en",
+  "locales": {
+    "ja": {
+      "description": "シンプルなToDoアプリです。",
+    }
+  }
 }
