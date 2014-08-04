@@ -6,6 +6,9 @@
   var VERSION = 1.0;
   var STORAGE_NAME = 'fxos_todo';
 
+  // localize
+  var l10n = document.webL10n.get;
+
   // localStorage wrapper
   var storage = {
     fetch: function () {
@@ -29,14 +32,14 @@
     },
     methods: {
       addTodo: function () {
-        var value = window.prompt('Add a ToDo');
+        var value = window.prompt(l10n('lc-add'));
         if (!value) {
           return;
         }
         this.todos.push({text: value});
       },
       removeTodo: function (todo) {
-        if (!window.confirm('Are you sure to check?')) {
+        if (!window.confirm(l10n('lc-deletion-confirm'))) {
           todo.$el.querySelector('input').checked = false;
           return;
         }
