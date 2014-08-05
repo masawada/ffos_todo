@@ -13,7 +13,19 @@
   "default_locale": "en",
   "locales": {
     "ja": {
-      "description": "シンプルなToDoアプリです。",
+      "description": "シンプルなToDoアプリです。"
+    },
+    "sr": {
+      "name": "За урадити",
+      "description": "Проста апликација са листом обавеза"
+    },
+    "sr-Cyrl": {
+      "name": "За урадити",
+      "description": "Проста апликација са листом обавеза"
+    },
+    "sr-Latn": {
+      "name": "Za uraditi",
+      "description": "Prosta aplikacija sa listom obaveza"
     }
   }
 }
