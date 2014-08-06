@@ -23,12 +23,20 @@
   var app = new Vue({
     el: '#app',
     data: {
-      todos: storage.fetch()
+      todos: storage.fetch(),
+      appName: 'ToDo'
     },
     ready: function () {
       this.$watch('todos', function (todos) {
         storage.save(todos);
       });
+
+      // set app name
+      var request = window.navigator.mozApps.getSelf();
+      request.onsuccess = function() {
+        var app_name = request.result.manifest.locales[document.webL10n.getLanguage()].name || request.result.manifest.name;
+        this.$set('appName', app_name);
+      }.bind(this);
     },
     methods: {
       addTodo: function () {
